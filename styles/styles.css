@@ -1,3 +1,22 @@
 :root {
     font-size: 1vw * 0.5em;
 }
+
+.draw-container {
+    border: solid 1px black;
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    height: 300px;
+}
+
+.block {
+    border: solid black 1px;
+    flex: 1;
+}
+
+.block:hover {
+    border: solid 1px orange;
+    transition: ease-out;
+}
+
