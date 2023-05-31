@@ -8,9 +8,27 @@
     <title>Sketch Pad</title>
 </head>
 <body>
+    <h1 class="title">SketchPad</h1>
     <main>
-        <div class="draw-container">
-        </div>
+        <section class="controls">
+            <button class="btn">Eraser</button>
+            <button class="btn">Colour Picker</button>
+            <button class="btn">Random Colours</button>
+            <button class="btn">Clear</button>
+        </section>
+        <section class="grid-section">
+            <div class="mouse-coordinates">
+                <p data-mx class="m-x"></p>
+                <p data-my class="m-y"></p>
+            </div>
+            <div class="draw-container">
+            </div>
+            <div class="grid-dimensions">
+                <p data-gridW class="width">Width: 16px</p>
+                <p data-gridH class="height">Height: 16px</p>
+            </div>
+            <input type="range" min="16" max="100">
+        </section>
     </main>
 <script src="scripts/main.js"></script>
 </body>
