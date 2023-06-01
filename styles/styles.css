@@ -11,21 +11,8 @@ main {
     justify-content: center;
 }
 
-.grid-section {
-    justify-content: center;
-}
-
-.draw-container {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(3px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(3px, 1fr));
-    width: 300px;
-    height: 300px;
-}
-
-.block:hover {
-    border: solid 1px orange;
-    transition: ease-out;
+.controls, .draw-container {
+    padding: 0;
 }
 
 .controls {
@@ -34,8 +21,20 @@ main {
     flex-direction: column;
 }
 
+.draw-container {
+    display: grid;
+    width: 300px;
+    height: 300px;
+}
+
+.block:hover {
+    background-color: burlywood;
+    transition: ease-out;
+}
+
+
 .btn {
-    border-radius: 50%;
+    border-radius: 0.8em;
     padding: 0.5em;
     outline: none;
 }

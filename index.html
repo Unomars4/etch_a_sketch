@@ -18,16 +18,30 @@
         </section>
         <section class="grid-section">
             <div class="mouse-coordinates">
-                <p data-mx class="m-x"></p>
-                <p data-my class="m-y"></p>
+                <p data-mx class="mx-label">
+                    X: <span class="m-x"></span>
+                </p>
+                <p data-my class="mx-label">
+                    Y: <span class="m-y"></span>
+                </p>
             </div>
             <div class="draw-container">
             </div>
             <div class="grid-dimensions">
-                <p data-gridW class="width">Width: 16px</p>
-                <p data-gridH class="height">Height: 16px</p>
+                <p data-gridW class="w-label">
+                    Width: <span class="width"></span>
+                </p>
+                <p data-gridH class="h-label">
+                    Height: <span class="height"></span>
+                </p>
             </div>
-            <input type="range" min="16" max="100">
+            <input
+            class="grid-slider" 
+            type="range" 
+            min="16" 
+            max="100" 
+            value="16"
+            />
         </section>
     </main>
 <script src="scripts/main.js"></script>
