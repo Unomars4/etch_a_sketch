@@ -1,9 +1,9 @@
 const slider = document.querySelector(".grid-slider");
 const container = document.querySelector(".draw-container");
-
-drawGrid(20);
+const sliderValue = document.querySelector(".slider-value");
+sliderValue.textContent = slider.value;
+drawGrid(15);
 // slider.addEventListener("change", sliderChangeGrid);
-container.addEventListener("onmouseover", updateMousePosition);
 
 function drawGrid(gridDimension = 16) {
     const width = calcBlockDimensions(gridDimension);    
@@ -40,8 +40,3 @@ function showBlockDimensions(blockDimension) {
     heightDisplay.textContent = `${blockDimension}px`;
 }
 
-function displayMousePosition() {
-    const mx = document.querySelector(".m-x");
-    const my = document.querySelector(".m-y");
-    
-}

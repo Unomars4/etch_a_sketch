@@ -8,44 +8,50 @@
     <title>Sketch Pad</title>
 </head>
 <body>
-    <h1 class="title">SketchPad</h1>
+    <header>
+        <h1 class="title">SketchPad</h1>
+    </header>
     <main>
         <section class="controls">
             <button class="btn">Eraser</button>
             <button class="btn">Colour Picker</button>
             <button class="btn">Random Colours</button>
             <button class="btn">Clear</button>
+            <label for="slider">Adjust Grid Size:</label>
+            <p class="slider-value"></p>
+            <input
+            class="grid-slider"
+            name="slider" 
+            type="range" 
+            min="5" 
+            max="100"
+            step="5" 
+            value="15"
+            />
         </section>
         <section class="grid-section">
             <div class="draw-container">
             </div>
             <div class="grid-dimensions">
-                <p data-gridW class="w-label">
+                <p class="w-label">
                     Width: <span class="width"></span>
                 </p>
-                <p data-gridH class="h-label">
+                <p class="w-label">
                     Height: <span class="height"></span>
                 </p>
             </div>
-            <input
-            class="grid-slider" 
-            type="range" 
-            min="16" 
-            max="100" 
-            value="16"
-            />
         </section>
-        <footer>
-            Copyright &#169
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            Unomars4
-            <a href="https://github.com/Unomars4">
-                <img class="github" src="assets/github.png">
-            </a>
-        </footer>
     </main>
-<script src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+<footer>
+    Copyright &#169
+    <script>
+        document.write(new Date().getFullYear());
+    </script>
+    Unomars4
+    <a href="https://github.com/Unomars4">
+        <img class="github" src="assets/github.png">
+    </a>
+</footer>
 </html>

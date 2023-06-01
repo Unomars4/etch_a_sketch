@@ -8,11 +8,12 @@
 
 main {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-.controls, .draw-container {
+.controls, .grid-section {
     padding: 0;
+    margin: 0 0.8em;
 }
 
 .controls {
@@ -22,21 +23,45 @@ main {
     justify-content: center;
 }
 
-.draw-container {
-    display: grid;
-    width: 300px;
-    height: 300px;
+.grid-section {
+    display: flex;
+    flex-direction: column;
 }
 
-.block:hover {
+.draw-container {
+    display: grid;
+    width: 400px;
+    height: 400px;
+}
+
+.block::before {
     background-color: burlywood;
     transition: ease-out;
+}
+
+.grid-slider, 
+label {
+    text-align: center;
+    margin: 0.5em 0;
 }
 
 
 .btn {
     border-radius: 0.8em;
     padding: 0.5em;
-    outline: none;
+    margin: 0.5em 0;
+    background-color: transparent;
 }
 
+.btn:hover {
+    border-color: blanchedalmond;
+}
+
+footer {
+    text-align: center;
+}
+
+footer, 
+main {
+    margin-top: 0.8em;
+}
