@@ -19,6 +19,7 @@ main {
     padding: 0 0.8em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .draw-container {

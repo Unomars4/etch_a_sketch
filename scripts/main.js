@@ -39,3 +39,9 @@ function showBlockDimensions(blockDimension) {
     widthDisplay.textContent = `${blockDimension}px`;
     heightDisplay.textContent = `${blockDimension}px`;
 }
+
+function displayMousePosition() {
+    const mx = document.querySelector(".m-x");
+    const my = document.querySelector(".m-y");
+    
+}
