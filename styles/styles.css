@@ -57,6 +57,11 @@ label {
     border-color: blanchedalmond;
 }
 
+.btn-icon {
+    width: 2em;
+    height: 2em;
+}
+
 footer {
     text-align: center;
 }

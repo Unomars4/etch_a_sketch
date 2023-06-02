@@ -1,25 +1,34 @@
 const slider = document.querySelector(".grid-slider");
 const container = document.querySelector(".draw-container");
+const defaultColor = "rgb(0, 0, 0)";
 
-drawGrid(slider.value);
+drawGrid(15);
+paintBlock();
 
 
-function drawGrid(gridDimension = 16) {
-    const width = calcBlockDimensions(gridDimension);    
-    
+function drawGrid(gridDimension = 15) {
+    const blockDimension = calcBlockDimensions(gridDimension);
+    generateGrid(gridDimension, blockDimension);
+    showBlockDimensions(gridDimension);
+}
+
+function generateGrid(gridDimension, blockDimension) {
     for (let i = 0; i < gridDimension; i++) {
         for (let j = 0; j < gridDimension; j++) {
             const block = document.createElement("div");
             block.classList = `block`;
-            block.style.width = `${width}px`, block.style.height = `${width}px`;
+            block.style.width = `${blockDimension}px`, block.style.height = `${blockDimension}px`;
             if ((i + j) % 2 == 0) block.style.backgroundColor = "grey";
             container.appendChild(block);
         }
     }
 
+    turnBlocksToGrid(gridDimension);
+}
+
+function turnBlocksToGrid(gridDimension) {
     container.style.gridTemplateRows =  `repeat(${gridDimension}, 1fr)`;
     container.style.gridTemplateColumns =  `repeat(${gridDimension}, 1fr)`;
-    showBlockDimensions(gridDimension);
 }
 
 function sliderChangeGrid() {
@@ -43,4 +52,10 @@ function showBlockDimensions(blockDimension) {
 
 function windowLoads() {
  //When window loads    
+}
+
+function paintBlock() {
+    const blocks = document.querySelectorAll(".block");
+    const changeBackground = (el) => el.style.backgroundColor = `${defaultColor}`;
+    blocks.forEach(block => block.onclick = (e) => changeBackground(e.target));   
 }

@@ -12,11 +12,17 @@
         <h1 class="title">SketchPad</h1>
     </header>
     <main>
-        <section class="controls">
-            <button class="btn">Eraser</button>
-            <button class="btn">Colour Picker</button>
-            <button class="btn">Random Colours</button>
-            <button class="btn">Clear</button>
+        <section class="controls" >
+            <button class="btn" title="Remove colours for certain blocks">
+                <img class="btn-icon" src="assets/eraser.png" alt="Image of an eraser">
+            </button>
+            <button class="btn" title="Add paint to the grid">
+                <img class="btn-icon" src="assets/paintbrush.png" alt="Image of a paintbrush">
+            </button>
+            <button class="btn" title="Random selects colours ">
+                <img class="btn-icon" src="assets/rainbow-flag.png" alt="Image of a rainbow">
+            </button>
+            <button class="btn" title="Clear the grid/canvas">Clear</button>
             <label for="slider">Adjust Grid Size:</label>
             <p class="slider-value"></p>
             <input
@@ -50,8 +56,8 @@
         document.write(new Date().getFullYear());
     </script>
     Unomars4
-    <a href="https://github.com/Unomars4">
-        <img class="github" src="assets/github.png">
+    <a href="https://github.com/Unomars4" title="Link to creators github">
+        <img class="github" src="assets/github.png" alt="Github logo">
     </a>
 </footer>
 </html>
