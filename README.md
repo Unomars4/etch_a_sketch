@@ -7,5 +7,5 @@
 
 ## Links
 
-- Live Demo: 
+- Live Demo: https://unomars4.github.io/etch_a_sketch/ 
 - Repository: https://github.com/Unomars4/etch_a_sketch

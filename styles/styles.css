@@ -42,15 +42,18 @@ main {
     height: 400px;
 }
 
-.block::before {
-    background-color: burlywood;
-    transition: ease-out;
+.block {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .grid-slider, 
 label {
     text-align: center;
     margin: 0.2em 0;
+}
+
+.grid-slider {
+    scroll-behavior: smooth;
 }
 
 
