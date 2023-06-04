@@ -108,7 +108,7 @@ function getOriginColor(n) {
 function randomMode() {
     const blocks = document.querySelectorAll(".block");
     blocks.forEach(block => block.onclick = () => {
-        paintBlock(randomColor());
+        block.style.backgroundColor = `${randomColor()}`;
     });
 }
 

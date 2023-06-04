@@ -5,11 +5,12 @@
 }
 
 * {
-    font-family: 'Rubik Puddles', cursive;
+    font-family: 'Monomaniac One', sans-serif;
 }
 
 .title {
     text-align: center;
+    font-family: 'Rubik Puddles', cursive;
     font-size: 2.5rem;
 }
 
