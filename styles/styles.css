@@ -62,11 +62,11 @@ label {
 }
 
 .btn.active {
-    border-color: blanchedalmond;
+    border-color: greenyellow;
 }
 
 .btn:hover {
-    border-color: blanchedalmond;
+    border-color: maroon;
 }
 
 .btn-icon {
@@ -81,4 +81,24 @@ footer {
 footer, 
 main {
     margin-top: 0.8em;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .draw-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn {
+        width: 8em;
+    }
+
+    .btn:hover {
+        border-color: none;
+    }
 }
