@@ -44,9 +44,9 @@ function showBlockDimensions(blockDimension) {
     heightDisplay.textContent = `${blockDimension}px`;
 }
 
-function paintBlock(color = currentColor) {
+function paintBlock() {
     const blocks = document.querySelectorAll(".block");
-    const changeBackground = (el) => el.style.backgroundColor = `${color}`;
+    const changeBackground = (el) => el.style.backgroundColor = `${currentColor}`;
     blocks.forEach(block => block.onclick = (e) => changeBackground(e.target));   
 }
 
