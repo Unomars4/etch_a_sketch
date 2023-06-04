@@ -47,7 +47,7 @@ function showBlockDimensions(blockDimension) {
 function paintBlock() {
     const blocks = document.querySelectorAll(".block");
     const changeBackground = (el) => el.style.backgroundColor = `${currentColor}`;
-    blocks.forEach(block => block.onclick = (e) => changeBackground(e.target));   
+    blocks.forEach(block => block.onmouseover = (e) => changeBackground(e.target));   
 }
 
 function switchMode(btn, mode) {
@@ -94,7 +94,7 @@ function defaultMode() {
 function eraseBlock() {
     const blocks = document.querySelectorAll(".block");
     const changeBackground = (el, color) => el.style.backgroundColor = `${color}`;
-    blocks.forEach(block => block.onclick = (e) => {
+    blocks.forEach(block => block.onmouseover = (e) => {
         const blockColor = getOriginColor(block["data-color"]);
         changeBackground(e.target, blockColor);
     }); 
@@ -107,7 +107,7 @@ function getOriginColor(n) {
 
 function randomMode() {
     const blocks = document.querySelectorAll(".block");
-    blocks.forEach(block => block.onclick = () => {
+    blocks.forEach(block => block.onmouseover = () => {
         block.style.backgroundColor = `${randomColor()}`;
     });
 }
