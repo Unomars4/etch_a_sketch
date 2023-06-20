@@ -1,11 +1,12 @@
 const container = document.querySelector(".draw-container");
+const picker = document.querySelector(".clr-picker");
 const slider = document.querySelector(".grid-slider");
 const eraseBtn = document.querySelector(".eraser");
 const paintBtn = document.querySelector(".paint");
 const randomBtn = document.querySelector(".randomcolors");
 const clearBtn = document.querySelector(".clear");
-let activeBtn = null, currentColor = "rgb(0, 0, 0)", 
-gridSize = slider.value, currentMode = null;
+let activeBtn = null, currentColor = "rgb(0, 0, 0)",
+    gridSize = slider.value, currentMode = null;
 
 
 window.onload = () => switchMode(paintBtn, "default");
@@ -14,27 +15,26 @@ paintBtn.onclick = () => switchMode(paintBtn, "paint");
 randomBtn.onclick = () => switchMode(randomBtn, "random");
 clearBtn.onclick = () => clearGrid();
 slider.onchange = () => adjustGrid();
+picker.onchange = () => changePaintColor();
+
+function changePaintColor() {
+    currentColor = picker.value;
+}
 
 function drawGrid() {
-    const blockDimension = calcBlockDimensions(gridSize);
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
             const block = document.createElement("div");
             block.classList = `block`;
             block["data-color"] = `${i + j}`;
-            block.style.width = `${blockDimension}px`, block.style.height = `${blockDimension}px`;
             if ((i + j) % 2 == 0) block.style.backgroundColor = "grey";
             container.appendChild(block);
         }
     }
     //Add grid display to grid
-    container.style.gridTemplateRows =  `repeat(${gridSize}, 1fr)`;
-    container.style.gridTemplateColumns =  `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     showBlockDimensions(gridSize);
-}
-
-function calcBlockDimensions(blockDimension) {
-    return container.clientWidth / blockDimension ;
 }
 
 function showBlockDimensions(blockDimension) {
@@ -47,7 +47,7 @@ function showBlockDimensions(blockDimension) {
 function paintBlock() {
     const blocks = document.querySelectorAll(".block");
     const changeBackground = (el) => el.style.backgroundColor = `${currentColor}`;
-    blocks.forEach(block => block.onmouseover = (e) => changeBackground(e.target));   
+    blocks.forEach(block => block.onmouseover = (e) => changeBackground(e.target));
 }
 
 function switchMode(btn, mode) {
@@ -70,7 +70,7 @@ function switchMode(btn, mode) {
 
 function toggleBtnActive(btn) {
     if (activeBtn == btn) return;
-    if (activeBtn && activeBtn != btn) activeBtn.classList.toggle("active");    
+    if (activeBtn && activeBtn != btn) activeBtn.classList.toggle("active");
     activeBtn = btn;
     activeBtn.classList.toggle("active");
 }
@@ -97,7 +97,7 @@ function eraseBlock() {
     blocks.forEach(block => block.onmouseover = (e) => {
         const blockColor = getOriginColor(block["data-color"]);
         changeBackground(e.target, blockColor);
-    }); 
+    });
 }
 
 function getOriginColor(n) {

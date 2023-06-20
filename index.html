@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styles.css">
@@ -7,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch Pad</title>
 </head>
+
 <body>
     <header>
         <h1 class="title">SketchPad</h1>
     </header>
     <main>
-        <section class="controls" >
+        <section class="controls">
+            <input type="color" title="Change paint color" class="clr-picker" value="#000000">
             <button class="btn eraser" title="Remove colours for certain blocks">
                 <img class="btn-icon" src="assets/eraser.png" alt="Image of an eraser">
             </button>
@@ -24,14 +27,7 @@
             </button>
             <button class="btn clear" title="Clear the grid/canvas">Clear</button>
             <label for="grid-slider">Adjust Grid Size:</label>
-            <input
-            class="grid-slider" 
-            type="range" 
-            min="5" 
-            max="100"
-            step="5" 
-            value="5"
-            />
+            <input class="grid-slider" type="range" min="5" max="100" step="5" value="5" />
         </section>
         <section class="grid-section">
             <div class="draw-container">
@@ -58,4 +54,5 @@
         <img class="github" src="assets/github.png" alt="Github logo">
     </a>
 </footer>
+
 </html>

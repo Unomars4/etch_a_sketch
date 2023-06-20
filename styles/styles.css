@@ -19,7 +19,8 @@ main {
     justify-content: space-evenly;
 }
 
-.controls, .grid-section {
+.controls,
+.grid-section {
     padding: 0;
     margin: 0 0.8em;
 }
@@ -42,11 +43,17 @@ main {
     height: 400px;
 }
 
-.block {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+.clr-picker {
+    width: 100%;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 0.8em;
+    height: 5em;
+    padding: 0.2em;
 }
 
-.grid-slider, 
+
+.grid-slider,
 label {
     text-align: center;
     margin: 0.2em 0;
@@ -68,7 +75,8 @@ label {
     border-color: greenyellow;
 }
 
-.btn:hover {
+.btn:hover,
+.clr-picker:hover {
     border-color: maroon;
 }
 
@@ -81,7 +89,7 @@ footer {
     text-align: center;
 }
 
-footer, 
+footer,
 main {
     margin-top: 0.8em;
 }
@@ -97,11 +105,13 @@ main {
         height: 300px;
     }
 
-    .btn {
+    .btn,
+    .clr-picker {
         width: 9em;
     }
 
-    .btn:hover {
+    .btn:hover,
+    .clr-picker:hover {
         border-color: none;
     }
 }
